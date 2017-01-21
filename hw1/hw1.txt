@@ -1,0 +1,70 @@
+1.
+	I tested on the first 10 padovan numbers, and the function outputted the correct results: 1 1 1 2 2 3 4 5 7 9 12.
+	> (PAD 0)
+	1
+	> (PAD 1)
+	1
+	> (PAD 2)
+	1
+	> (PAD 3)
+	2
+	> (PAD 4)
+	2
+	> (PAD 5)
+	3
+	> (PAD 6)
+	4
+	> (PAD 7)
+	5
+	> (PAD 8)
+	7
+	> (PAD 9)
+	9
+	> (PAD 10)
+	12
+
+	On higher N, such as (PAD 100), the function became very slow because the recursive implementation without using dynamic programming (ie storing previous padovan numbers in a variable to more easily compute the next) makes it very inefficient. The time increases exponentially with N.
+
+2.
+	The first 10 sums: 0 0 0 1 1 2 3 4 6 8 11.
+	> (SUMS 0)
+	0
+	> (SUMS 1)
+	0
+	> (SUMS 2)
+	0
+	> (SUMS 3)
+	1
+	> (SUMS 4)
+	1
+	> (SUMS 5)
+	2
+	> (SUMS 6)
+	3
+	> (SUMS 7)
+	4
+	> (SUMS 8)
+	6
+	> (SUMS 9)
+	8
+	> (SUMS 10)
+	11
+	
+	The relationship between PAD and SUM is that PAD = SUM + 1. This happens because SUM follows the same recursive pattern as PAD (since it's supposed to count the additions of PAD itself). The difference is in the base case, where SUM = 0 and PAD = 1 for N = 0, 1, 2. This difference makes SUM = PAD - 1 overall.
+	
+3.
+	I tested the program on the inputs given in the hw pdf, and results were correct.
+	> (ANON ’42)
+	?
+	> (ANON ’FOO)
+	?
+	> (ANON ’(((L E) F) T))
+	(((? ?) ?) ?)
+	> (ANON ’(5 FOO 3.1 -0.2))
+	(? ? ? ?)
+	> (ANON ’(1 (FOO 3.1) -0.2))
+	(? (? ?) ?)
+	> (ANON ’(((1 2) (FOO 3.1)) (BAR -0.2)))
+	(((? ?) (? ?)) (? ?))
+	> (ANON ’(R (I (G (H T)))))
+	(? (? (? (? ?))))

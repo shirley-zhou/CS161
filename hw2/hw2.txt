@@ -1,0 +1,22 @@
+Testing question 1:
+
+> (BFS '(ROOT))
+(ROOT)
+> (BFS '((((L E) F) T)))
+(T F L E)
+> (BFS '((R (I (G (H T))))))
+(R I G H T)
+> (BFS '(((A (B)) C (D))))
+(C A D B)
+> (BFS '((T (H R E) E)))
+(T E H R E)
+> (BFS '((A ((C ((E) D)) B))))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Testing question 2:
+
+> (setf S '(Nil Nil Nil Nil))
+> (setf PATH nil)
+
+> (DFS S PATH)
+((Nil Nil NIl Nil) (T T Nil Nil) (Nil T Nil Nil) (T T Nil T) (Nil Nil Nil T) (T Nil T T) (Nil Nil T T) (T T T T))

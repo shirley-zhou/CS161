@@ -1,0 +1,12 @@
+Jun Zhou 804179311
+HW4
+
+The graph1 coloring problem is unsatisfiable with just 3 colors.
+It is satisfiable with 4.
+These results mean that the graph is colorable only with >= 4 colors.
+A possible solution with 4 colors for node:color pairs with colors from 1 to 4 is:
+1:1, 2:2, 3:3, 4:4, 5:2, 6:3, 7:4
+Or based on the output of the rsat solver,
+-1 -28 -27 -26 25 -5 -9 -21 -24 -23 22 -14 -2 -18 -20 -19 17 -13 -16 15 -11 -12 10 -6 -8 7 -3 4
+
+The minimum number of colors required to satisfy graph2 is 8.
